@@ -1,0 +1,29 @@
+{
+  "functions": {
+    "source": "functions",
+    "predeploy": [
+      "npm --prefix src run build"
+    ]
+  },
+  "hosting": {
+    "public": "public",
+    "predeploy": [
+      "rm -rf public",
+      "mkdir public",
+      "mkdir public/_nuxt",
+      "cp -a functions/.nuxt/dist/client/. public/_nuxt",
+      "cp -a src/static/. public/"
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssrapp"
+      }
+    ]
+  }
+}
