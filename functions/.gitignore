@@ -1,5 +1,3 @@
 node_modules
 .nuxt
 nuxt.config.js
-package-lock.json
-package.json
