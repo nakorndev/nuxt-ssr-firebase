@@ -2,7 +2,9 @@
   "functions": {
     "source": "functions",
     "predeploy": [
-      "npm --prefix src run build"
+      "cd functions && npm run predeploy && rm package-lock.json && rm -rf node_modules && npm install",
+      "npm --prefix src run build",
+      "cp src/nuxt.config.js functions/nuxt.config.js"
     ]
   },
   "hosting": {
@@ -22,7 +24,7 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "ssrapp"
+        "function": "nuxtApp"
       }
     ]
   }
