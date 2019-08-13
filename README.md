@@ -56,6 +56,7 @@ module.exports = {
 }
 ```
 
+- At `functions` directory use `npm install` to install a packages for [gulp.js](https://gulpjs.com/)
 - At root directory
   - You may need to login by `firebase login` to authorization your Firebase project
   - Use `firebase use --add` to select your project (If `.firebaserc` is not setup)
