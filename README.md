@@ -13,15 +13,13 @@ To use [Nuxt.js](https://nuxtjs.org/) with [Firebase](https://firebase.google.co
 - Clone this project
 - Create a new Nuxt.js project by `npx create-nuxt-app src` or copy all of your main Nuxt.js work into `src` folder
 - Edit `src/nuxt.config.js`
-  - Change `export default { ... }` to `module.exports = { ... }`
-  - Add `buildDir: '../functions/.nuxt'`
+  - (Should) change `export default { ... }` to `module.exports = { ... }`
   - Add `extractCSS: true` to `build` section
 
 Example of `src/nuxt.config.js`
 
 ```js
 module.exports = {
-  buildDir: '../functions/.nuxt', // Add here!
   mode: 'universal',
   head: {
     title: process.env.npm_package_name || '',
@@ -49,7 +47,7 @@ module.exports = {
   axios: {
   },
   build: {
-    extractCSS: true, // And here!
+    extractCSS: true, // Add here!
     extend (config, ctx) {
     }
   }

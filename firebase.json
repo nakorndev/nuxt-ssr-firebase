@@ -2,8 +2,10 @@
   "functions": {
     "source": "functions",
     "predeploy": [
-      "cd functions && npm run predeploy && rm package-lock.json && rm -rf node_modules && npm install",
+      "cd functions && npm run predeploy && rm package-lock.json && npm install",
       "npm --prefix src run build",
+      "rm -rf functions/.nuxt",
+      "cp -r src/.nuxt/ functions/.nuxt/",
       "cp src/nuxt.config.js functions/nuxt.config.js"
     ]
   },

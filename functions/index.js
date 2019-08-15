@@ -7,8 +7,7 @@ const config = {
   ...nuxtConfig,
   dev: false,
   debug: false,
-  devModules: [],
-  buildDir: '.nuxt'
+  devModules: []
 }
 const nuxt = new Nuxt(config)
 
